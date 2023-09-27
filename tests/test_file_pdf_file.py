@@ -1,7 +1,7 @@
 import os
 from unittest import TestCase
 
-from utils import PDFFile
+from utils_base import PDFFile
 
 TEST_PDF_FILE = PDFFile(os.path.join('tests', 'example.pdf'))
 

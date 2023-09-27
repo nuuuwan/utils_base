@@ -3,8 +3,9 @@ import tempfile
 import unittest
 from urllib.parse import urljoin
 
-from utils import CSVFile, File, JSONFile, TSVFile, XSVFile
 from utils.www import WWW
+
+from utils_base import CSVFile, File, JSONFile, TSVFile, XSVFile
 
 TEST_DATA_LIST = [
     {'name': 'Alpha', 'age': '1'},

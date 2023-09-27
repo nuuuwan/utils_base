@@ -1,7 +1,7 @@
 import time
 from unittest import TestCase
 
-from utils import FiledVariable
+from utils_base import FiledVariable
 
 MAX_N = 1_000_000
 VALUE = (MAX_N) * (MAX_N - 1) // 2

@@ -1,7 +1,7 @@
 import random
 from unittest import TestCase
 
-from utils import Color
+from utils_base import Color
 
 random.seed(0)
 

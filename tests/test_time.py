@@ -1,8 +1,8 @@
 import time
 from unittest import TestCase
 
-from utils import (TIMEZONE_OFFSET, Time, TimeDelta, TimeFormat, TimeUnit,
-                   get_date_id, get_time_id)
+from utils_base import (TIMEZONE_OFFSET, Time, TimeDelta, TimeFormat, TimeUnit,
+                        get_date_id, get_time_id)
 
 
 class TestTime(TestCase):

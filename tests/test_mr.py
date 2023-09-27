@@ -1,7 +1,7 @@
 """Test."""
 import unittest
 
-from utils import mr
+from utils_base import mr
 
 
 class TestMR(unittest.TestCase):

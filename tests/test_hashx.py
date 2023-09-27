@@ -2,7 +2,7 @@
 
 import unittest
 
-from utils import hashx
+from utils_base import hashx
 
 
 class TestHashx(unittest.TestCase):

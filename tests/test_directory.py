@@ -1,7 +1,7 @@
 import os
 from unittest import TestCase
 
-from utils import Directory
+from utils_base import Directory
 
 
 class TestDirectory(TestCase):
