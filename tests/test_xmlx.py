@@ -4,7 +4,7 @@ import os
 import tempfile
 import unittest
 
-from utils.xmlx import _, render_link_styles, style
+from utils_base.xmlx import _, render_link_styles, style
 
 TEST_BODY = _(
     'body',
@@ -18,7 +18,7 @@ TEST_BODY = _(
                 _(
                     'a',
                     'This is a a(link) in a div',
-                    dict(href='https://pypi.org/project/utils-nuuuwan'),
+                    dict(href='https://pypi.org/project/utils_base-nuuuwan'),
                 ),
             ],
         ),

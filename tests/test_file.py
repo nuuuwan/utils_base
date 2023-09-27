@@ -1,9 +1,6 @@
 import os
 import tempfile
 import unittest
-from urllib.parse import urljoin
-
-from utils.www import WWW
 
 from utils_base import CSVFile, File, JSONFile, TSVFile, XSVFile
 
@@ -99,22 +96,6 @@ class TestFile(unittest.TestCase):
         tsv_file.write(TEST_DATA_LIST)
         data_list = tsv_file.read()
         self.assertEqual(TEST_DATA_LIST, data_list)
-
-    def test_tsv_read_and_write_custom(self):
-        URL_SUMMARY = urljoin(
-            'https://raw.githubusercontent.com',
-            'nuuuwan/news_lk3_data/main/reports/summary.tsv',
-        )
-        tmp_file = WWW(URL_SUMMARY).download()
-        d_list = TSVFile(tmp_file).read()
-        tsv_file = TSVFile(
-            tempfile.NamedTemporaryFile(
-                prefix="utils_test_file.", suffix=".tsv"
-            ).name
-        )
-        tsv_file.write(d_list)
-        data_list2 = tsv_file.read()
-        self.assertEqual(d_list, data_list2)
 
     def write_test_json_file(self):
         json_file_name = tempfile.NamedTemporaryFile(

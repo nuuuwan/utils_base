@@ -1,7 +1,7 @@
 """Test."""
 import unittest
 
-from utils.String import String
+from utils_base.String import String
 
 SNAKE_AND_CAMEL_EXAMPLES = [
     ['this_is_a_test', 'ThisIsATest'],
