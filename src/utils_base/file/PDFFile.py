@@ -12,8 +12,8 @@ class PDFFile(File):
     @cached_property
     def n_pages(self):
         file = open(self.path, 'rb')
-        reader = PyPDF2.PdfFileReader(file)
-        return reader.numPages
+        reader = PyPDF2.PdfReader(file)
+        return len(reader.pages)
 
     @property
     def dir_tables(self):
