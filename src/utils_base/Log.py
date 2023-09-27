@@ -8,7 +8,7 @@ LEVEL_TO_COLOR = {
     logging.CRITICAL: textColor.MAGENTA,
     logging.ERROR: textColor.RED,
     logging.WARNING: textColor.YELLOW,
-    logging.INFO: textColor.BLUE,
+    logging.INFO: textColor.GREEN,
     logging.DEBUG: textColor.WHITE,
     logging.NOTSET: textColor.WHITE,
 }
@@ -33,3 +33,4 @@ class Log(logging.Logger):
 
 
 _log = Log('default')
+print(textColor.__dict__)
