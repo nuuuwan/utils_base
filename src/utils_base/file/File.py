@@ -3,8 +3,6 @@ import os
 from utils_base.file.FileOrDirectory import FileOrDirectory
 
 DIALECT = 'excel'
-DELIMITER_CSV = ','
-DELIMITER_TSV = '\t'
 DELIM_LINE = '\n'
 ENCODING = 'utf-8'
 
@@ -24,19 +22,8 @@ class File(FileOrDirectory):
             fin.close()
         return content
 
-    def readBinary(self):
-        with open(self.path, 'rb') as fin:
-            content = fin.read()
-            fin.close()
-        return content
-
     def write(self, content):
         with open(self.path, 'w', encoding=ENCODING) as fout:
-            fout.write(content)
-            fout.close()
-
-    def writeBinary(self, content):
-        with open(self.path, 'wb') as fout:
             fout.write(content)
             fout.close()
 
