@@ -1,0 +1,3 @@
+camelot-py
+py_console
+PyPDF2==2.0.0
