@@ -15,6 +15,7 @@ pip install utils_base-nuuuwan
 ### 1.0.2 
 * [#1](https://github.com/nuuuwan/utils_base/issues/1) - complete.
 * Changed log color logging.INFO: textColor.GREEN
+* Added unittest for _log; Changed default name to blank.
 
 ### 1.0.1 (CURRENT)
 * [#4](https://github.com/nuuuwan/utils_base/issues/4)

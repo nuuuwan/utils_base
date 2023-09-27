@@ -32,5 +32,4 @@ class Log(logging.Logger):
         self.handlers = [sh]  # noqa
 
 
-_log = Log('default')
-print(textColor.__dict__)
+_log = Log('')
