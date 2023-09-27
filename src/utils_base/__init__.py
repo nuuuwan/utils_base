@@ -10,7 +10,7 @@ from utils_base.file.TSVFile import TSVFile
 from utils_base.file.XSVFile import XSVFile
 from utils_base.file.Zip import Zip
 from utils_base.List import List
-from utils_base.Log import Log
+from utils_base.Log import Log, _log
 from utils_base.String import String
 from utils_base.Table import Table, TableRow
 from utils_base.time import (DAYS_IN, SECONDS_IN, TIME_FORMAT_DATE,

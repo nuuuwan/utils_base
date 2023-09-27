@@ -9,7 +9,7 @@ LEVEL_TO_COLOR = {
     logging.ERROR: textColor.RED,
     logging.WARNING: textColor.YELLOW,
     logging.INFO: textColor.BLUE,
-    logging.DEBUG: textColor.GREEN,
+    logging.DEBUG: textColor.WHITE,
     logging.NOTSET: textColor.WHITE,
 }
 
@@ -17,9 +17,7 @@ LEVEL_TO_COLOR = {
 class CustomLoggingFormatter(logging.Formatter):
     def format(self, record):
         color = LEVEL_TO_COLOR[record.levelno]
-        return console.highlight(
-            f'({record.name}-{record.levelname}): {record.msg}', color
-        )
+        return console.highlight(f'{record.name}> {record.msg}', color)
 
 
 class Log(logging.Logger):
@@ -32,3 +30,6 @@ class Log(logging.Logger):
         sh.setLevel(logging.DEBUG)
         sh.setFormatter(formatter)
         self.handlers = [sh]
+
+
+_log = Log('default')
