@@ -1,4 +1,3 @@
-import os
 import tempfile
 import unittest
 
@@ -96,18 +95,6 @@ class TestFile(unittest.TestCase):
         tsv_file.write(TEST_DATA_LIST)
         data_list = tsv_file.read()
         self.assertEqual(TEST_DATA_LIST, data_list)
-
-    def write_test_json_file(self):
-        json_file_name = tempfile.NamedTemporaryFile(
-            prefix="utils.test_zip_read_and_write.", suffix=".json"
-        ).name
-        data = [i for i in range(0, 1_000)]
-        json_file = JSONFile(json_file_name)
-        json_file.write(data)
-        json_file_size = os.path.getsize(json_file_name)
-        expected_json_file_size = 6_892
-        self.assertEqual(expected_json_file_size, json_file_size)
-        return json_file_name, json_file, data
 
 
 if __name__ == '__main__':

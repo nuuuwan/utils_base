@@ -87,7 +87,7 @@ class _:
     @property
     def element(self):
         element = ElementTree.Element(self.tag_real)
-        element.attrib = self.expanded_attrib
+        element.attrib = self.expanded_attrib  # noqa
         for child_element in self.child_element_list:
             element.append(child_element)
         element.text = self.text

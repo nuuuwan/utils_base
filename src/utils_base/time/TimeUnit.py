@@ -32,7 +32,7 @@ AVG_QTR = AVG_YEAR / 4
 AVG_MONTH = AVG_YEAR / 12
 
 
-class SECONDS_IN:
+class SECONDS_IN:  # noqa
     MINUTE = MINUTE / SECOND
     HOUR = HOUR / SECOND
     DAY = DAY / SECOND
@@ -44,7 +44,7 @@ class SECONDS_IN:
     AVG_YEAR = AVG_YEAR / SECOND
 
 
-class DAYS_IN:
+class DAYS_IN:  # noqa
     AVG_MONTH = AVG_MONTH / DAY
     AVG_QTR = AVG_QTR / DAY
     AVG_YEAR = AVG_YEAR / DAY

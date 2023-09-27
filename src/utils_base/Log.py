@@ -29,7 +29,7 @@ class Log(logging.Logger):
         sh = logging.StreamHandler()
         sh.setLevel(logging.DEBUG)
         sh.setFormatter(formatter)
-        self.handlers = [sh]
+        self.handlers = [sh]  # noqa
 
 
 _log = Log('default')

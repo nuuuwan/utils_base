@@ -3,12 +3,6 @@ import unittest
 
 from utils_base.String import String
 
-SNAKE_AND_CAMEL_EXAMPLES = [
-    ['this_is_a_test', 'ThisIsATest'],
-    ['123', '123'],
-    ['123_testing123', '123Testing123'],
-]
-
 
 class TestDT(unittest.TestCase):
     def test_float(self):

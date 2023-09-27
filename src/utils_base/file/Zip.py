@@ -2,7 +2,7 @@ import os
 import zipfile
 
 
-class Zip:
+class Zip:  # noqa
     def __init__(self, path):
         self.path = path
 
@@ -32,7 +32,7 @@ class Zip:
             os.remove(self.path)
             assert not os.path.exists(self.path)
 
-    def unzip(self, skip_delete=False):
+    def unzip(self, skip_delete=False):  # noqa
         assert os.path.exists(self.zip_path)
         with zipfile.ZipFile(self.zip_path) as zip_file:
             zip_file.extractall(self.dir_zip)
