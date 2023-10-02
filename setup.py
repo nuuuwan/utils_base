@@ -29,7 +29,6 @@ setuptools.setup(
     install_requires=[
         'camelot-py',
         'opencv-python',
-        'py_console',
         'PyPDF2==2.0.0',
     ],
     test_suite='nose.collector',
