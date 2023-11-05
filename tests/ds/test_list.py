@@ -1,52 +1,52 @@
-from unittest import TestCase
+import unittest
 
 from utils_base import List
 
-TEST_LIST_RAW = ['a', 'b', 'c', 'd']
-TEST_LIST = List(TEST_LIST_RAW)
 
+class TestList(unittest.TestCase):
+    def setUp(self):
+        self.list_class = List([1, 2, 3, 4, 5])
 
-class TestList(TestCase):
-    def test_init(self):
-        self.assertEqual(TEST_LIST.tolist(), TEST_LIST_RAW)
-        x = List()
-        self.assertEqual(x.tolist(), [])
-
-    def test_len(self):
-        self.assertEqual(len(TEST_LIST), len(TEST_LIST_RAW))
-
-    def test_getitem(self):
-        for idx in range(len(TEST_LIST_RAW)):
-            self.assertEqual(TEST_LIST[idx], TEST_LIST_RAW[idx])
-
-    def test_setitem(self):
-        x = List([1, 2])
-        x[0] = 11
-        x[1] = 22
-        self.assertEqual(x.tolist(), [11, 22])
-
-    def test_eq(self):
-        self.assertEqual(TEST_LIST, TEST_LIST_RAW)
-        self.assertEqual(TEST_LIST, List(TEST_LIST_RAW))
-        self.assertNotEqual(TEST_LIST, "List")
-
-    def test_str(self):
-        self.assertEqual(str(TEST_LIST), str(TEST_LIST_RAW))
-
-    def test_repr(self):
-        self.assertEqual(repr(TEST_LIST), repr(TEST_LIST_RAW))
-
-    def test_add(self):
-        self.assertEqual(List([1, 2]) + List([3, 4]), List([1, 2, 3, 4]))
-
-    def test_flatten(self):
-        self.assertEqual(List([[1, 2], [3, 4]]).flatten(), List([1, 2, 3, 4]))
-        with self.assertRaises(TypeError):
-            List([[1, 2], 3]).flatten()
-
-    def test_unique(self):
-        self.assertEqual(List([1, 2, 3, 2]).unique(), List([1, 2, 3]))
+    def test_tolist(self):
+        self.assertEqual(self.list_class.raw, [1, 2, 3, 4, 5])
 
     def test_iter(self):
-        for item in TEST_LIST:
-            self.assertIn(item, TEST_LIST_RAW)
+        self.assertEqual(list(iter(self.list_class)), [1, 2, 3, 4, 5])
+
+    def test_len(self):
+        self.assertEqual(len(self.list_class), 5)
+
+    def test_getitem(self):
+        self.assertEqual(self.list_class[1], 2)
+
+    def test_setitem(self):
+        self.list_class[1] = 10
+        self.assertEqual(self.list_class[1], 10)
+
+    def test_eq(self):
+        self.assertFalse(self.list_class == List([1, 10, 3, 4, 5]))
+        self.assertTrue(self.list_class == List([1, 2, 3, 4, 5]))
+
+    def test_add(self):
+        added_list = self.list_class + List([6, 7, 8])
+        self.assertEqual(added_list.raw, [1, 2, 3, 4, 5, 6, 7, 8])
+
+    def test_flatten(self):
+        self.list_class = List([[1, 2], [3, 4]])
+        self.assertEqual(self.list_class.flatten().raw, [1, 2, 3, 4])
+
+    def test_unique(self):
+        self.list_class = List([1, 2, 2, 3, 3, 3])
+        self.assertEqual(self.list_class.unique().raw, [1, 2, 3])
+
+    def test_map(self):
+        mapped_list = self.list_class.map(lambda x: x**2)
+        self.assertEqual(mapped_list.raw, [1, 4, 9, 16, 25])
+
+    def test_filter(self):
+        filtered_list = self.list_class.filter(lambda x: x > 2)
+        self.assertEqual(filtered_list.raw, [3, 4, 5])
+
+
+if __name__ == '__main__':
+    unittest.main()

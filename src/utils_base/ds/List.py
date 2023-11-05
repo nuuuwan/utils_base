@@ -6,7 +6,8 @@ class List(Iter):
         assert isinstance(x, list)
         self.x = x
 
-    def tolist(self):
+    @property
+    def raw(self):
         return self.x
 
     def __iter__(self):
@@ -48,3 +49,9 @@ class List(Iter):
 
     def unique(self):
         return List(list(set(self.x)))
+
+    def map(self, func) -> "List":
+        return List(list(map(func, self.x)))
+
+    def filter(self, func) -> "List":
+        return List(list(filter(func, self.x)))
