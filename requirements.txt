@@ -1,5 +1,6 @@
-camelot-py 
-opencv-python # required by camelot-py
+# Autogenerate by build_requirements
+camelot-py
+opencv-python
 PyPDF2==2.0.0
 Pillow
 geopy
