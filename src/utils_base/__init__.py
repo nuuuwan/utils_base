@@ -1,3 +1,7 @@
+from utils_base.console.Console import Console
+from utils_base.console.constants import (COLOR_BACKGROUND, COLOR_FOREGROUND,
+                                          COLOR_FORMAT, LEVEL_TO_STYLE)
+from utils_base.console.Log import Log, _log
 from utils_base.ds.Dict import Dict
 from utils_base.ds.List import List
 from utils_base.ds.parses import parse_float, parse_int
@@ -14,10 +18,6 @@ from utils_base.file.Zip import Zip
 from utils_base.geo.LatLng import LatLng
 from utils_base.geo.LatLngLK import LatLngLK
 from utils_base.image.Image import Image
-from utils_base.log.Console import Console
-from utils_base.log.constants import (COLOR_BACKGROUND, COLOR_FOREGROUND,
-                                      COLOR_FORMAT, LEVEL_TO_STYLE)
-from utils_base.log.Log import Log, _log
 from utils_base.time.Time import Time
 from utils_base.time.TimeDelta import TimeDelta
 from utils_base.time.TimeFormat import (TIME_FORMAT_DATE, TIME_FORMAT_DATE_ID,

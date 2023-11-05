@@ -2,8 +2,8 @@
 
 import logging
 
-from utils_base.log.Console import Console
-from utils_base.log.constants import LEVEL_TO_STYLE
+from utils_base.console.Console import Console
+from utils_base.console.constants import LEVEL_TO_STYLE
 
 
 class CustomLoggingFormatter(logging.Formatter):

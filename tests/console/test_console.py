@@ -13,7 +13,7 @@ class TestConsole(unittest.TestCase):
             'redblueboldHello' + COLOR_FORMAT.RESET,
         )
 
-    def test_visual_self(self):
+    def test_visual_self(self):  # noqa
         print('')
         for text, foreground, background, format in [
             (

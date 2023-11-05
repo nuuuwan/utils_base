@@ -12,8 +12,10 @@ pip install utils_base-nuuuwan
 
 ## Version History
 
+### 1.0.6 
+* Fix log ignore BUG
 
-### 1.0.5 (CURRENT)
+### 1.0.5
 * Added Console, improved Log
 * Added TimeFormat.format
 

@@ -1,5 +1,5 @@
-from utils_base.log.constants import (COLOR_BACKGROUND, COLOR_FOREGROUND,
-                                      COLOR_FORMAT)
+from utils_base.console.constants import (COLOR_BACKGROUND, COLOR_FOREGROUND,
+                                          COLOR_FORMAT)
 
 
 class Console:

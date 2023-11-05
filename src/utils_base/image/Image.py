@@ -4,7 +4,7 @@ import tempfile
 from PIL import Image as PImage
 from PIL import ImageDraw, ImageEnhance, ImageFont
 
-from utils_base.log.Log import Log
+from utils_base.console.Log import Log
 
 log = Log(__name__)
 
