@@ -12,7 +12,11 @@ pip install utils_base-nuuuwan
 
 ## Version History
 
-### 1.0.3 (CURRENT)
+
+### 1.0.4 (CURRENT)
+* Fixed geo init bug
+
+### 1.0.3 
 * Added image
 * Deprecated Color
 * Deprecated Table

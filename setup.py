@@ -3,7 +3,7 @@
 import setuptools
 
 DIST_NAME = 'utils_base'
-VERSION = "1.0.3"
+VERSION = "1.0.4"
 DESCRIPTION = "Utilities that extend Standard Python."
 
 setuptools.setup(
