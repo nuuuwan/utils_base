@@ -29,7 +29,7 @@ class TestImage(unittest.TestCase):
         path = self.image.write_temp()
         self.assertTrue(os.path.exists(path))
         print(path)
-        
+
     def test_crop(self):
         width_height = (200, 200)
         cropped_image = self.image.crop((10, 10), width_height=width_height)
@@ -65,14 +65,14 @@ class TestImage(unittest.TestCase):
         )
 
     def test_equalize(self):
-        equalized_image = Image.equalize(self.image.im.convert('L'))
+        equalized_image = Image.equalize(self.image.im.convert('L'), 0, 360)
         self.assertIsInstance(equalized_image, PImage.Image)
 
-    def test_equalize_value(self):
-        equalized_value_image = self.image.equalize_value()
+    def test_equalize_hue(self):
+        equalized_value_image = self.image.equalize_hue()
         self.assertIsInstance(equalized_value_image, Image)
         equalized_value_image.write(
-            os.path.join(DIR_TEST_OUTPUT, "__test_equalize_value.png")
+            os.path.join(DIR_TEST_OUTPUT, "__test_equalize_hue.png")
         )
 
     def test_enhance(self):

@@ -78,18 +78,19 @@ class Image:
         return idx
 
     @staticmethod
-    def equalize(c):
+    def equalize(c, min_v: float, max_v: float):
+        assert min_v < max_v
         idx = Image.equalize_map(list(c.getdata()))
-        return c.point(lambda x: int(idx.get(x, 0) * 255))
+        span = max_v - min_v
+        return c.point(lambda x: int(min_v + idx.get(x, 0) * span))
 
-    def equalize_value(self) -> 'Image':
+    def equalize_hue(self, min_v: float = 0, max_v: float = 360) -> 'Image':
         im = self.im.convert('HSV')
         h, s, v = im.split()
-        v = Image.equalize(v)
+        h = Image.equalize(h, min_v, max_v)
 
         im = PImage.merge('HSV', (h, s, v))
         im = im.convert('RGB')
-        log.debug('Equalized hue')
         return Image(im)
 
     def enhance(self, factor: float) -> 'Image':
