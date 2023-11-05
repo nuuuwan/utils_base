@@ -1,7 +1,7 @@
 """Test."""
 import unittest
 
-from utils_base.String import String
+from utils_base import String
 
 
 class TestDT(unittest.TestCase):

@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from utils_base.Dict import Dict
+from utils_base import Dict
 
 TEST_DICT_RAW = dict(a=1, b=2, c=3, d=4)
 TEST_DICT = Dict(TEST_DICT_RAW)
