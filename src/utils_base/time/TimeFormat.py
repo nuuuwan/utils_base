@@ -23,6 +23,9 @@ class TimeFormat:
             self.format_str, time.localtime(t.ut + self.dut_timezone)
         )
 
+    def format(self, t: Time) -> str:
+        return self.stringify(t)
+
 
 TIME_FORMAT_DATE = TimeFormat('%Y-%m-%d')  # noqa
 TIME_FORMAT_TIME = TimeFormat('%Y-%m-%d %H:%M:%S')  # noqa

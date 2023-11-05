@@ -15,6 +15,7 @@ pip install utils_base-nuuuwan
 
 ### 1.0.5 (CURRENT)
 * Added Console, improved Log
+* Added TimeFormat.format
 
 ### 1.0.4 
 * Fixed geo init bug
