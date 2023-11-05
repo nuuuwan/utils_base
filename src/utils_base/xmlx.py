@@ -1,7 +1,7 @@
 import xml.dom.minidom as minidom
 import xml.etree.ElementTree as ElementTree
 
-from utils_base import String
+from utils_base.ds.String import String
 from utils_base.file.File import File
 
 FONT_FAMILY = 'sans-serif'
