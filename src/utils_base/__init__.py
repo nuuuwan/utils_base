@@ -27,3 +27,7 @@ from utils_base.time.TimeID import get_date_id, get_time_id
 from utils_base.time.TimeUnit import DAYS_IN, SECONDS_IN, TimeUnit
 from utils_base.time.TIMEZONE_OFFSET import TIMEZONE_OFFSET
 from utils_base.xmlx import _
+
+# Deprecated
+Table = None
+TableRow = None

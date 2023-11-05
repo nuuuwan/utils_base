@@ -17,7 +17,7 @@ class LatLngLK(LatLng):
     BBOX = LatLng.bbox([NORTH, SOUTH, EAST, WEST])
 
     @staticmethod
-    def get_t(
+    def get_func_t_lk(
         width: float,
         height: float,
         padding: float,
