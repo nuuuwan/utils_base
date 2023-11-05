@@ -12,6 +12,9 @@ pip install utils_base-nuuuwan
 
 ## Version History
 
+### 1.0.3 (NEXT)
+* Added image
+
 ### 1.0.2 (CURRENT)
 * [#1](https://github.com/nuuuwan/utils_base/issues/1) - complete.
 * Changed log color logging.INFO: textColor.GREEN
