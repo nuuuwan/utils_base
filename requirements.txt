@@ -2,3 +2,4 @@ camelot-py
 opencv-python # required by camelot-py
 PyPDF2==2.0.0
 Pillow
+geopy

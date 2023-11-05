@@ -18,6 +18,7 @@ pip install utils_base-nuuuwan
 * Deprecated Table
 * List: Added map and filter
 * Added parse_int and parse_float
+* Added Geo
 
 ### 1.0.2 (CURRENT)
 * [#1](https://github.com/nuuuwan/utils_base/issues/1) - complete.
