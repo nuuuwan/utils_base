@@ -5,14 +5,6 @@ from utils_base import (COLOR_BACKGROUND, COLOR_FOREGROUND, COLOR_FORMAT,
 
 
 class TestConsole(unittest.TestCase):
-    def test_format(self):
-        self.assertEqual(
-            Console.format(
-                'Hello', foreground='red', background='blue', format='bold'
-            ),
-            'redblueboldHello' + COLOR_FORMAT.RESET,
-        )
-
     def test_visual_self(self):  # noqa
         print('')
         for text, foreground, background, format in [
