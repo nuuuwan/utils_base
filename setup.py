@@ -30,6 +30,7 @@ setuptools.setup(
         'camelot-py',
         'opencv-python',
         'PyPDF2==2.0.0',
+        'Pillow',
     ],
     test_suite='nose.collector',
     tests_require=['nose'],
