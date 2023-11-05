@@ -25,6 +25,11 @@ class TestImage(unittest.TestCase):
         path = self.image.write(file_path)
         self.assertEqual(path, file_path)
 
+    def test_write_temp(self):
+        path = self.image.write_temp()
+        self.assertTrue(os.path.exists(path))
+        print(path)
+        
     def test_crop(self):
         width_height = (200, 200)
         cropped_image = self.image.crop((10, 10), width_height=width_height)
