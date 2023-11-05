@@ -1,3 +1,4 @@
+import os
 import tempfile
 
 from PIL import Image as PImage
@@ -6,6 +7,12 @@ from PIL import ImageDraw, ImageEnhance, ImageFont
 from utils_base.Log import Log
 
 log = Log(__name__)
+
+
+class DEFAULT:
+    FONT_FAMILY = os.path.join('src', 'utils_base', 'image', 'trebuc.ttf')
+    FONT_SIZE = 40
+    FILL = (0, 0, 0)
 
 
 class Image:
@@ -60,8 +67,10 @@ class Image:
         font_size: int = None,
     ):  # -> Image
         draw = ImageDraw.Draw(self.im)
-        font = ImageFont.truetype(font_family or 'arial.ttf', font_size or 40)
-        draw.text(left_top, text, fill=fill or (0, 0, 0), font=font)
+        font = ImageFont.truetype(
+            font_family or DEFAULT.FONT_FAMILY, font_size or DEFAULT.FONT_SIZE
+        )
+        draw.text(left_top, text, fill=fill or DEFAULT.FILL, font=font)
         left, top = left_top
         log.debug(f'draw_text(({left},{top}), "{text}")')
         return Image(self.im)
