@@ -3,7 +3,7 @@
 import setuptools
 
 DIST_NAME = 'utils_base'
-VERSION = "1.0.2"
+VERSION = "1.0.3"
 DESCRIPTION = "Utilities that extend Standard Python."
 
 setuptools.setup(
@@ -31,6 +31,7 @@ setuptools.setup(
         'opencv-python',
         'PyPDF2==2.0.0',
         'Pillow',
+        'geopy',
     ],
     test_suite='nose.collector',
     tests_require=['nose'],

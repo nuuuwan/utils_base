@@ -12,7 +12,7 @@ pip install utils_base-nuuuwan
 
 ## Version History
 
-### 1.0.3 (NEXT)
+### 1.0.3 (CURRENT)
 * Added image
 * Deprecated Color
 * Deprecated Table
@@ -20,7 +20,7 @@ pip install utils_base-nuuuwan
 * Added parse_int and parse_float
 * Added Geo
 
-### 1.0.2 (CURRENT)
+### 1.0.2 
 * [#1](https://github.com/nuuuwan/utils_base/issues/1) - complete.
 * Changed log color logging.INFO: textColor.GREEN
 * Added unittest for _log; Changed default name to blank.
