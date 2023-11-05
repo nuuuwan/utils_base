@@ -3,8 +3,15 @@
 import setuptools
 
 DIST_NAME = 'utils_base'
-VERSION = "1.0.4"
+VERSION = "1.0.5"
 DESCRIPTION = "Utilities that extend Standard Python."
+INSTALL_REQUIRES = [
+    'camelot-py',
+    'opencv-python',
+    'PyPDF2==2.0.0',
+    'Pillow',
+    'geopy',
+]
 
 setuptools.setup(
     name="%s-nuuuwan" % DIST_NAME,
@@ -26,13 +33,7 @@ setuptools.setup(
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
     python_requires=">=3.10",
-    install_requires=[
-        'camelot-py',
-        'opencv-python',
-        'PyPDF2==2.0.0',
-        'Pillow',
-        'geopy',
-    ],
+    install_requires=INSTALL_REQUIRES,
     test_suite='nose.collector',
     tests_require=['nose'],
 )

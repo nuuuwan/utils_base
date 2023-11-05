@@ -13,7 +13,10 @@ pip install utils_base-nuuuwan
 ## Version History
 
 
-### 1.0.4 (CURRENT)
+### 1.0.5 (CURRENT)
+* Added Console, improved Log
+
+### 1.0.4 
 * Fixed geo init bug
 
 ### 1.0.3 
