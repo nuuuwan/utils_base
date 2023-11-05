@@ -15,6 +15,7 @@ pip install utils_base-nuuuwan
 ### 1.0.3 (NEXT)
 * Added image
 * Deprecated Color
+* Deprecated Table
 
 ### 1.0.2 (CURRENT)
 * [#1](https://github.com/nuuuwan/utils_base/issues/1) - complete.

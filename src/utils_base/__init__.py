@@ -12,7 +12,6 @@ from utils_base.file.XSVFile import XSVFile
 from utils_base.file.Zip import Zip
 from utils_base.image.Image import Image
 from utils_base.Log import Log, _log
-from utils_base.Table import Table, TableRow
 from utils_base.time.Time import Time
 from utils_base.time.TimeDelta import TimeDelta
 from utils_base.time.TimeFormat import (TIME_FORMAT_DATE, TIME_FORMAT_DATE_ID,
@@ -25,3 +24,4 @@ from utils_base.xmlx import _
 
 # Deprecated Classes, but deleted from dependencies
 Color = None
+Table, TableRow = None, None
