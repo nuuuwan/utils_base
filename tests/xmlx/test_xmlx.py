@@ -54,7 +54,9 @@ class TestXMLX(unittest.TestCase):
         ).name
         html.store(actual_file)
 
-        expected_file = os.path.join('tests', 'test_xmlx_example1.html')
+        expected_file = os.path.join(
+            'tests', 'xmlx', 'test_xmlx_example1.html'
+        )
         self.assertListEqual(
             list(io.open(actual_file)),
             list(io.open(expected_file)),
