@@ -10,6 +10,7 @@ class TestCase(unittest.TestCase):
             for label, func in [
                 ('debug', log.debug),
                 ('info', log.info),
+                (dict(info='info'), log.info),
                 ('warning', log.warning),
                 ('error', log.error),
                 ('critical', log.critical),

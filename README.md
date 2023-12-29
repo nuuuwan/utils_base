@@ -12,7 +12,10 @@ pip install utils_base-nuuuwan
 
 ## Version History
 
-### 1.0.7
+### 1.0.8 
+* Enable Log to process non strings
+
+### 1.0.7 (CURRENT VERSION)
 * Fix log ignore BUG (Take 2)
 
 ### 1.0.6 

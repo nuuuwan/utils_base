@@ -10,8 +10,8 @@ class CustomLoggingFormatter(logging.Formatter):
     def format(self, record):
         style = LEVEL_TO_STYLE[record.levelno]
         return Console.format(
-            (f'[{record.name}] ' if record.name else ''),
-            record.msg,
+            (f'[{record.name}]' if record.name else ''),
+            str(record.msg),
             **style,
         )
 
