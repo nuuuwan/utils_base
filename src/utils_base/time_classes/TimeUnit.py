@@ -20,31 +20,13 @@ class TimeUnit:
         return False
 
 
-SECOND = TimeUnit(1)
-MINUTE = SECOND * 60
-HOUR = MINUTE * 60
-DAY = HOUR * 24
-WEEK = DAY * 7
-FORTNIGHT = WEEK * 7
+TimeUnit.SECOND = TimeUnit(1)
+TimeUnit.MINUTE = TimeUnit.SECOND * 60
+TimeUnit.HOUR = TimeUnit.MINUTE * 60
+TimeUnit.DAY = TimeUnit.HOUR * 24
+TimeUnit.WEEK = TimeUnit.DAY * 7
+TimeUnit.FORTNIGHT = TimeUnit.WEEK * 7
 
-AVG_YEAR = DAY * 365.25
-AVG_QTR = AVG_YEAR / 4
-AVG_MONTH = AVG_YEAR / 12
-
-
-class SECONDS_IN:  # noqa
-    MINUTE = MINUTE / SECOND
-    HOUR = HOUR / SECOND
-    DAY = DAY / SECOND
-    WEEK = WEEK / SECOND
-    FORTNIGHT = FORTNIGHT / SECOND
-
-    AVG_MONTH = AVG_MONTH / SECOND
-    AVG_QTR = AVG_QTR / SECOND
-    AVG_YEAR = AVG_YEAR / SECOND
-
-
-class DAYS_IN:  # noqa
-    AVG_MONTH = AVG_MONTH / DAY
-    AVG_QTR = AVG_QTR / DAY
-    AVG_YEAR = AVG_YEAR / DAY
+TimeUnit.AVG_YEAR = TimeUnit.DAY * 365.25
+TimeUnit.AVG_QTR = TimeUnit.AVG_YEAR / 4
+TimeUnit.AVG_MONTH = TimeUnit.AVG_YEAR / 12

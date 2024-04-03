@@ -2,7 +2,7 @@ import math
 
 import geopy.distance
 
-from utils_base.ds.parses import parse_float
+from utils_base.ds import parses
 
 
 class LatLng:
@@ -30,8 +30,12 @@ class LatLng:
         for x in ['N', 'S', 'E', 'W']:
             latlng_str = latlng_str.replace(x, '')
         lat_str, lng_str = latlng_str.split(',')
-        lat = parse_float(lat_str) * (-1 if 'S' in latlng_str_original else 1)
-        lng = parse_float(lng_str) * (-1 if 'W' in latlng_str_original else 1)
+        lat = parses.parse_float(lat_str) * (
+            -1 if 'S' in latlng_str_original else 1
+        )
+        lng = parses.parse_float(lng_str) * (
+            -1 if 'W' in latlng_str_original else 1
+        )
         return LatLng(lat, lng)
 
     def distance(self, other: 'LatLng') -> float:
