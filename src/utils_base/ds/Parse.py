@@ -1,18 +1,18 @@
-class parses:
+class Parse:
     @staticmethod
     def _clean_(x: str) -> str:
         return x.strip().lower().replace(',', '')
 
     @staticmethod
-    def parse_int(x) -> int:
+    def int(x) -> int:
         try:
-            return int(parses._clean_(x))
+            return int(Parse._clean_(x))
         except ValueError:
             return None
 
     @staticmethod
-    def parse_float(x) -> float:
+    def float(x) -> float:
         try:
-            return float(parses._clean_(x))
+            return float(Parse._clean_(x))
         except ValueError:
             return None

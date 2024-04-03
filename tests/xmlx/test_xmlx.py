@@ -4,12 +4,12 @@ import os
 import tempfile
 import unittest
 
-from utils_base.xmlx import _, render_link_styles, style
+from utils_base import _, xmlx
 
 TEST_BODY = _(
     'body',
     [
-        _('h1', 'This is header 1', style(font_family='Georgia')),
+        _('h1', 'This is header 1', xmlx.style(font_family='Georgia')),
         _('p', 'This is a paragraph'),
         _(
             'div',
@@ -34,7 +34,7 @@ class TestXMLX(unittest.TestCase):
         expected = '''<?xml version="1.0" ?>
 <link rel="stylesheet" href="styles.css"/>
 '''
-        actual = str(render_link_styles())
+        actual = str(xmlx.render_link_styles())
         self.assertEqual(expected, actual)
 
     def test_repr(self):

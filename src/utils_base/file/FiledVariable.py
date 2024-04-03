@@ -1,7 +1,7 @@
 import tempfile
 
-from utils_base import hashx
 from utils_base.file.JSONFile import JSONFile
+from utils_base.hashx import hashx
 
 FILE_VARIABLE_CACHE = {}
 

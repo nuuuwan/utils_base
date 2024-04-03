@@ -1,4 +1,4 @@
-from utils_base.time_classes.TimeUnit import TimeUnit
+from utils_base.time.TimeUnit import TimeUnit
 
 SECOND = TimeUnit(1)
 MINUTE = SECOND * 60

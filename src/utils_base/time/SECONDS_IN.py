@@ -1,4 +1,4 @@
-from utils_base.time_classes.TimeUnit import TimeUnit
+from utils_base.time.TimeUnit import TimeUnit
 
 
 class SECONDS_IN:  # noqa

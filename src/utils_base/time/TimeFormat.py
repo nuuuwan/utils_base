@@ -1,7 +1,7 @@
 import time
 
-from utils_base.time_classes.Time import Time
-from utils_base.time_classes.TIMEZONE_OFFSET import TIMEZONE_OFFSET
+from utils_base.time.Time import Time
+from utils_base.time.TIMEZONE_OFFSET import TIMEZONE_OFFSET
 
 
 class TimeFormat:
