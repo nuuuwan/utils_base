@@ -1,6 +1,5 @@
-from utils_base.console.COLOR_BACKGROUND import COLOR_BACKGROUND
-from utils_base.console.COLOR_FOREGROUND import COLOR_FOREGROUND
-from utils_base.console.COLOR_FORMAT import COLOR_FORMAT
+from utils_base.console.constants import (COLOR_BACKGROUND, COLOR_FOREGROUND,
+                                          COLOR_FORMAT)
 
 
 class Console:

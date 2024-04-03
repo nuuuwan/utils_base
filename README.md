@@ -12,6 +12,9 @@ pip install utils_base-nuuuwan
 
 ## Version History
 
+### 1.0.9 (NEXT VERSION)
+* move constants to constant folders; remove *lowercase* classes
+
 ### 1.0.8 (CURRENT VERSION)
 * Enable Log to process non strings
 * Use new pyl_build_inits (MIGHT BREAK)

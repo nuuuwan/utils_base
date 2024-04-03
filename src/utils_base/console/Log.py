@@ -3,7 +3,7 @@
 import logging
 
 from utils_base.console.Console import Console
-from utils_base.console.LEVEL_TO_STYLE import LEVEL_TO_STYLE
+from utils_base.console.constants import LEVEL_TO_STYLE
 
 
 class CustomLoggingFormatter(logging.Formatter):
