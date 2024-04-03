@@ -1,11 +1,11 @@
 import unittest
 
-from utils_base import Log, _log
+from utils_base import Log
 
 
 class TestCase(unittest.TestCase):
     def test_log(self):
-        for log in [_log, Log('custom')]:
+        for log in [Log('custom'), Log.main, Log.default, Log.pipeline]:
             self.assertIsNotNone(log)
             for label, func in [
                 ('debug', log.debug),

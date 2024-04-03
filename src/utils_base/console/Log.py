@@ -26,3 +26,8 @@ class Log(logging.Logger):
         sh.setLevel(logging.DEBUG)
         sh.setFormatter(formatter)
         self.handlers = [sh]  # noqa
+
+
+Log.default = Log('default')
+Log.main = Log('main')
+Log.pipeline = Log('pipeline')
