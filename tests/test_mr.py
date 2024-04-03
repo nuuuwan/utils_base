@@ -1,7 +1,7 @@
 """Test."""
 import unittest
 
-from utils_base import mr
+from utils_base import Parallel
 
 
 class TestMR(unittest.TestCase):
@@ -20,7 +20,7 @@ class TestMR(unittest.TestCase):
                 input_list,
             )
         )
-        actual_output = mr.map_parallel(
+        actual_output = Parallel.map(
             func_map,
             input_list,
             max_threads=4,

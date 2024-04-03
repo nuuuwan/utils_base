@@ -18,6 +18,7 @@ pip install utils_base-nuuuwan
 * Removed _log, added Log.main etc
 * Added TimeFormat(...).formatNow
 * Cleaned-up TimeUnit and TimeId functions
+* Refactored Hash, Parallel (mr) and XML
 
 ### 1.0.8 (CURRENT VERSION)
 

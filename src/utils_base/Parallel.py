@@ -5,9 +5,9 @@ import concurrent.futures
 DEFAULT_MAX_THREADS = 4
 
 
-class mr:
+class Parallel:
     @staticmethod
-    def _run_parallel(workers, max_threads=DEFAULT_MAX_THREADS):
+    def run(workers, max_threads=DEFAULT_MAX_THREADS):
         """Run workers in parallel."""
         with concurrent.futures.ThreadPoolExecutor(
             max_threads
@@ -26,7 +26,7 @@ class mr:
             return output_list
 
     @staticmethod
-    def map_parallel(func_map, params_list, max_threads=DEFAULT_MAX_THREADS):
+    def map(func_map, params_list, max_threads=DEFAULT_MAX_THREADS):
         """Run list(map(...)) in parallel.
 
         Args:
@@ -55,4 +55,4 @@ class mr:
                 params_list,
             )
         )
-        return mr._run_parallel(workers, max_threads)
+        return Parallel.run(workers, max_threads)

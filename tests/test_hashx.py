@@ -2,7 +2,7 @@
 
 import unittest
 
-from utils_base import hashx
+from utils_base import Hash
 
 
 class TestHashx(unittest.TestCase):
@@ -12,7 +12,7 @@ class TestHashx(unittest.TestCase):
         """Test."""
         self.assertEqual(
             'fc3ff98e8c6a0d3087d515c0473f8677',
-            hashx.md5('hello world!'),
+            Hash.md5('hello world!'),
         )
 
 

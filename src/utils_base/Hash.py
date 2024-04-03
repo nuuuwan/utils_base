@@ -2,7 +2,7 @@
 import hashlib
 
 
-class hashx:
+class Hash:
     @staticmethod
     def md5(s):
         """Compute MD5 Hash."""

@@ -1,7 +1,7 @@
 import tempfile
 
 from utils_base.file.JSONFile import JSONFile
-from utils_base.hashx import hashx
+from utils_base.Hash import Hash
 
 FILE_VARIABLE_CACHE = {}
 
@@ -13,7 +13,7 @@ class FiledVariable:
 
     @property
     def cache_key(self):
-        return hashx.md5(self.key)
+        return Hash.md5(self.key)
 
     @property
     def file_path(self):

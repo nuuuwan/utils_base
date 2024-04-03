@@ -1,5 +1,5 @@
-from utils_base._ import _
 from utils_base.ds.String import String
+from utils_base.xml._ import _
 
 FONT_FAMILY = 'sans-serif'
 DEFAULT_ATTRIB_MAP = {
@@ -12,7 +12,7 @@ DEFAULT_ATTRIB_MAP = {
 }
 
 
-class xmlx:
+class XMLUtils:
     @staticmethod
     def render_link_styles(css_file='styles.css'):
         return _('link', None, {'rel': 'stylesheet', 'href': css_file})

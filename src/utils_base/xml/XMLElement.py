@@ -14,7 +14,7 @@ DEFAULT_ATTRIB_MAP = {
 }
 
 
-class _:
+class XMLElement:
     def __init__(
         self,
         tag: str,
