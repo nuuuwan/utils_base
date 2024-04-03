@@ -13,27 +13,36 @@ pip install utils_base-nuuuwan
 ## Version History
 
 ### 1.0.9 (NEXT VERSION)
+
 * Moved console constants to constants folder
 * Removed _log, added Log.main etc
+* Added TimeFormat(...).formatNow
+* Cleaned-up TimeUnit and TimeId functions
 
 ### 1.0.8 (CURRENT VERSION)
+
 * Enable Log to process non strings
 * Use new pyl_build_inits (MIGHT BREAK)
 
 ### 1.0.7 
+
 * Fix log ignore BUG (Take 2)
 
 ### 1.0.6 
+
 * Fix log ignore BUG
 
 ### 1.0.5
+
 * Added Console, improved Log
 * Added TimeFormat.format
 
 ### 1.0.4 
+
 * Fixed geo init bug
 
 ### 1.0.3 
+
 * Added image
 * Deprecated Color
 * Deprecated Table

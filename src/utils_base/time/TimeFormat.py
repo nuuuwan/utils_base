@@ -1,11 +1,11 @@
 import time
 
 from utils_base.time.Time import Time
-from utils_base.time.TIMEZONE_OFFSET import TIMEZONE_OFFSET
+from utils_base.time.TimeZoneOffset import TimeZoneOffset
 
 
 class TimeFormat:
-    def __init__(self, format_str: str, timezone_offset=TIMEZONE_OFFSET.LK):
+    def __init__(self, format_str: str, timezone_offset=TimeZoneOffset.LK):
         self.format_str = format_str
         self.timezone_offset = timezone_offset
 
@@ -25,6 +25,10 @@ class TimeFormat:
 
     def format(self, t: Time) -> str:
         return self.stringify(t)
+
+    @property
+    def formatNow(self) -> str:
+        return self.format(Time.now())
 
 
 TimeFormat.DATE = TimeFormat('%Y-%m-%d')  # noqa

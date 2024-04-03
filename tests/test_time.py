@@ -1,8 +1,7 @@
 import time
 from unittest import TestCase
 
-from utils_base import (TIMEZONE_OFFSET, Time, TimeDelta, TimeFormat, TimeUnit,
-                        get_date_id, get_time_id)
+from utils_base import Time, TimeDelta, TimeFormat, TimeUnit, TimeZoneOffset
 
 
 class TestTime(TestCase):
@@ -55,7 +54,7 @@ class TestTime(TestCase):
             ['%Y-%m-%d %H:%M', '2009-02-14 05:01', 1234567860],
             ['%Y-%m-%d %H:%M:%S', '2009-02-14 05:01:30', 1234567890],
         ]:
-            tf = TimeFormat(format_str, TIMEZONE_OFFSET.LK)
+            tf = TimeFormat(format_str, TimeZoneOffset.LK)
             self.assertEqual(
                 expected_time_str,
                 tf.stringify(t),
@@ -68,11 +67,11 @@ class TestTime(TestCase):
             )
 
     def test_time_id(self):
-        time_id = get_time_id()
+        time_id = TimeFormat.TIME_ID.formatNow
         self.assertEqual(len(time_id), 15)
 
     def test_date_id(self):
-        date_id = get_date_id()
+        date_id = TimeFormat.DATE_ID.formatNow
         self.assertEqual(len(date_id), 8)
 
     def test_time_unit_truediv(self):

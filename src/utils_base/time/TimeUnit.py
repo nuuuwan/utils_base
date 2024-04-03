@@ -30,3 +30,27 @@ TimeUnit.FORTNIGHT = TimeUnit.WEEK * 7
 TimeUnit.AVG_YEAR = TimeUnit.DAY * 365.25
 TimeUnit.AVG_QTR = TimeUnit.AVG_YEAR / 4
 TimeUnit.AVG_MONTH = TimeUnit.AVG_YEAR / 12
+
+
+class SECONDS_IN:  # noqa
+    MINUTE = TimeUnit.MINUTE / TimeUnit.SECOND
+    HOUR = TimeUnit.HOUR / TimeUnit.SECOND
+    DAY = TimeUnit.DAY / TimeUnit.SECOND
+    WEEK = TimeUnit.WEEK / TimeUnit.SECOND
+    FORTNIGHT = TimeUnit.FORTNIGHT / TimeUnit.SECOND
+
+    AVG_MONTH = TimeUnit.AVG_MONTH / TimeUnit.SECOND
+    AVG_QTR = TimeUnit.AVG_QTR / TimeUnit.SECOND
+    AVG_YEAR = TimeUnit.AVG_YEAR / TimeUnit.SECOND
+
+
+TimeUnit.SECOND_IN = SECONDS_IN
+
+
+class DAYS_IN:  # noqa
+    AVG_MONTH = TimeUnit.AVG_MONTH / TimeUnit.DAY
+    AVG_QTR = TimeUnit.AVG_QTR / TimeUnit.DAY
+    AVG_YEAR = TimeUnit.AVG_YEAR / TimeUnit.DAY
+
+
+TimeUnit.DAYS_IN = DAYS_IN
