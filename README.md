@@ -12,7 +12,9 @@ pip install utils_base-nuuuwan
 
 ## Version History
 
-### 1.0.9 (NEXT VERSION)
+### 1.0.10 (NEXT VERSION)
+
+### 1.0.9 (CURRENT VERSION)
 
 * Moved console constants to constants folder
 * Removed _log, added Log.main etc
@@ -20,7 +22,7 @@ pip install utils_base-nuuuwan
 * Cleaned-up TimeUnit and TimeId functions
 * Refactored Hash, Parallel (mr) and XML
 
-### 1.0.8 (CURRENT VERSION)
+### 1.0.8 
 
 * Enable Log to process non strings
 * Use new pyl_build_inits (MIGHT BREAK)

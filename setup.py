@@ -3,7 +3,7 @@
 import setuptools
 
 DIST_NAME = 'utils_base'
-VERSION = "1.0.8"
+VERSION = "1.0.9"
 DESCRIPTION = "Utilities that extend Standard Python."
 INSTALL_REQUIRES = [
     'camelot-py',
