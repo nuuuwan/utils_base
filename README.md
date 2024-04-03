@@ -12,10 +12,11 @@ pip install utils_base-nuuuwan
 
 ## Version History
 
-### 1.0.8 
+### 1.0.8 (CURRENT VERSION)
 * Enable Log to process non strings
+* Use new pyl_build_inits (MIGHT BREAK)
 
-### 1.0.7 (CURRENT VERSION)
+### 1.0.7 
 * Fix log ignore BUG (Take 2)
 
 ### 1.0.6 
