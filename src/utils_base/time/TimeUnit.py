@@ -44,7 +44,7 @@ class SECONDS_IN:  # noqa
     AVG_YEAR = TimeUnit.AVG_YEAR / TimeUnit.SECOND
 
 
-TimeUnit.SECOND_IN = SECONDS_IN
+TimeUnit.SECONDS_IN = SECONDS_IN
 
 
 class DAYS_IN:  # noqa
