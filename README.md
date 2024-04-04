@@ -14,6 +14,8 @@ pip install utils_base-nuuuwan
 
 ### 1.0.10 (NEXT VERSION)
 
+* Fixed TimeUnit.SECOND_IN BUG
+
 ### 1.0.9 (CURRENT VERSION)
 
 * Moved console constants to constants folder
