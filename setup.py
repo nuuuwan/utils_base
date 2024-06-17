@@ -6,9 +6,10 @@ DIST_NAME = 'utils_base'
 VERSION = "1.0.10"
 DESCRIPTION = "Utilities that extend Standard Python."
 INSTALL_REQUIRES = [
+    'numpy',
     'camelot-py',
     'opencv-python',
-    'PyPDF2==2.0.0',
+    'PyPDF2',
     'Pillow',
     'geopy',
 ]

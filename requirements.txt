@@ -1,6 +1,7 @@
 # Autogenerate by build_requirements
+numpy<2
 camelot-py
-opencv-python==4.9.0.80
+opencv-python
 PyPDF2==2.0.0
 Pillow
 geopy
