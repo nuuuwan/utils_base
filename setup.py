@@ -3,7 +3,7 @@
 import setuptools
 
 DIST_NAME = 'utils_base'
-VERSION = "1.0.10"
+VERSION = "1.0.11"
 DESCRIPTION = "Utilities that extend Standard Python."
 INSTALL_REQUIRES = [
     'numpy',
