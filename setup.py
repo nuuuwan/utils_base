@@ -12,6 +12,7 @@ INSTALL_REQUIRES = [
     "PyPDF2",
     "Pillow",
     "geopy",
+    "python-docx",
 ]
 
 setuptools.setup(

@@ -5,3 +5,4 @@ opencv-python
 PyPDF2==2.0.0
 Pillow
 geopy
+python-docx
