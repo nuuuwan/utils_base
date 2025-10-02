@@ -2,28 +2,29 @@ import os
 
 from utils_base.file.FileOrDirectory import FileOrDirectory
 
-DIALECT = 'excel'
-DELIM_LINE = '\n'
-ENCODING = 'utf-8'
+DIALECT = "excel"
+DELIM_LINE = "\n"
+ENCODING = "utf-8"
 
 
 class File(FileOrDirectory):
+
     def delete(self):
         if self.exists:
             os.remove(self.path)
 
     @property
     def ext(self):
-        return self.name.split('.')[-1]
+        return self.name.split(".")[-1]
 
     def read(self):
-        with open(self.path, 'r', encoding=ENCODING) as fin:
+        with open(self.path, "r", encoding=ENCODING) as fin:
             content = fin.read()
             fin.close()
         return content
 
     def write(self, content):
-        with open(self.path, 'w', encoding=ENCODING) as fout:
+        with open(self.path, "w", encoding=ENCODING) as fout:
             fout.write(content)
             fout.close()
 
