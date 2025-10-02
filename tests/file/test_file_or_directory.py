@@ -7,6 +7,7 @@ from utils_base import File, FileOrDirectory
 class TestCase(unittest.TestCase):
 
     def test_general(self):
+        os.makedirs(os.path.join("tests", "_output"), exist_ok=True)
         file_path = os.path.join("tests", "_output", "test.txt")
         f = File(file_path)
         content = "12345678" * 1_000
@@ -18,6 +19,7 @@ class TestCase(unittest.TestCase):
         self.assertEqual(str(f), f"{file_path} (8.0 kB)")
 
     def test_small_file(self):
+        os.makedirs(os.path.join("tests", "_output"), exist_ok=True)
         file_path = os.path.join("tests", "_output", "test_small.txt")
         f = File(file_path)
         content = "12345678"

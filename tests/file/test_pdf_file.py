@@ -41,7 +41,7 @@ class TestCase(unittest.TestCase):
                 "sizes": [12.0],
             },
         )
-
+        os.makedirs(os.path.join("tests", "_output"), exist_ok=True)
         image_path = os.path.join("tests", "_output", "test_page1.png")
         pdf_file.download_image(0, image_path)
 
