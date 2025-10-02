@@ -10,4 +10,3 @@ from utils_base.file.pdf_file import (PDFFile, PDFFileCompressMixin,
                                       PDFTextMixin)
 from utils_base.file.TSVFile import TSVFile
 from utils_base.file.XSVFile import XSVFile
-from utils_base.file.Zip import Zip

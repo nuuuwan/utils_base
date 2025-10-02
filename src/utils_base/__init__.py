@@ -6,7 +6,7 @@ from utils_base.console import (COLOR_BACKGROUND, COLOR_FOREGROUND,
 from utils_base.ds import Dict, Iter, List, Parse, String
 from utils_base.file import (CSVFile, File, FiledVariable, FileOrDirectory,
                              JSONFile, PDFFile, PDFFileCompressMixin,
-                             PDFTextMixin, TSVFile, XSVFile, Zip)
+                             PDFTextMixin, TSVFile, XSVFile)
 from utils_base.geo import LatLng, LatLngLK
 from utils_base.Hash import Hash
 from utils_base.image import Image
