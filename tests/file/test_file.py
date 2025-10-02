@@ -4,17 +4,17 @@ import unittest
 from utils_base import CSVFile, File, JSONFile, TSVFile, XSVFile
 
 TEST_DATA_LIST = [
-    {'name': 'Alpha', 'age': '1'},
-    {'name': 'Bravo', 'age': '2'},
+    {"name": "Alpha", "age": "1"},
+    {"name": "Bravo", "age": "2"},
 ]
 
 TEST_DATA_ITEM_LIST = [
     True,
     1234,
     1234.5678,
-    '1234',
-    [1, 2, 3, 'test'],
-    {'test': 123},
+    "1234",
+    [1, 2, 3, "test"],
+    {"test": 123},
     TEST_DATA_LIST,
 ]
 
@@ -27,13 +27,14 @@ class TestFile(unittest.TestCase):
         file2 = File(
             tempfile.NamedTemporaryFile(prefix="test2.", suffix=".txt").name
         )
+
         self.assertEqual(file1, file1)
         self.assertNotEqual(file1, file2)
-        self.assertNotEqual(file1, 'file2')
+        self.assertNotEqual(file1, "file2")
 
     def test_read_and_write(self):
         """Test."""
-        content = 'Hello' * 100
+        content = "Hello" * 100
         file = File(
             tempfile.NamedTemporaryFile(
                 prefix="utils.test_file.", suffix=".txt"
@@ -42,9 +43,9 @@ class TestFile(unittest.TestCase):
         file.write(content)
         content2 = file.read()
         self.assertEqual(content, content2)
-        self.assertEqual(file.ext, 'txt')
+        self.assertEqual(file.ext, "txt")
 
-        lines = [f'Hello {i}' for i in range(0, 100)]
+        lines = [f"Hello {i}" for i in range(0, 100)]
         file.write_lines(lines)
         lines2 = file.read_lines()
         self.assertEqual(lines, lines2)
@@ -61,20 +62,20 @@ class TestFile(unittest.TestCase):
             self.assertEqual(data, data2)
 
     def test_xsv_delimiter(self):
-        xsv_file = XSVFile('')
+        xsv_file = XSVFile("")
         with self.assertRaises(NotImplementedError) as _:
             xsv_file.delimiter
 
     def test_xsv_read_helper(self):
-        delimiter = ' '
-        xsv_lines = ['a b c', '1 2 3']
+        delimiter = " "
+        xsv_lines = ["a b c", "1 2 3"]
         data_list = XSVFile._readHelper(delimiter, xsv_lines)
-        expected_data_list = [{'a': '1', 'b': '2', 'c': '3'}]
+        expected_data_list = [{"a": "1", "b": "2", "c": "3"}]
         self.assertEqual(expected_data_list, data_list)
 
     def test_csv_delimiter(self):
-        csv_file = CSVFile('')
-        self.assertEqual(csv_file.delimiter, ',')
+        csv_file = CSVFile("")
+        self.assertEqual(csv_file.delimiter, ",")
 
     def test_csv_read_and_write(self):
         csv_file = CSVFile(
@@ -97,5 +98,5 @@ class TestFile(unittest.TestCase):
         self.assertEqual(TEST_DATA_LIST, data_list)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
