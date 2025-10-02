@@ -16,6 +16,9 @@ class FileOrDirectory:
     def __str__(self):
         return f"{self.path} ({self.size_humanized})"
 
+    def __hash__(self):
+        return hash(self.path)
+
     @property
     def size(self):
         if not self.exists:
