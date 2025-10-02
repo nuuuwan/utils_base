@@ -1,4 +1,5 @@
 """Test."""
+
 import io
 import os
 import tempfile

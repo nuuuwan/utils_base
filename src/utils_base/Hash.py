@@ -1,4 +1,5 @@
 """Hashx."""
+
 import hashlib
 
 

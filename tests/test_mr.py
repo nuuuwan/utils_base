@@ -1,4 +1,5 @@
 """Test."""
+
 import unittest
 
 from utils_base import Parallel

@@ -1,4 +1,5 @@
 # utils_base.time (auto generate by build_inits.py)
+# flake8: noqa: F408
 
 from utils_base.time.Time import Time
 from utils_base.time.TimeDelta import TimeDelta

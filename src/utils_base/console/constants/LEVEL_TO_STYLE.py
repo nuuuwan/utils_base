@@ -1,6 +1,5 @@
 import logging
 
-from utils_base.console.constants.COLOR_BACKGROUND import COLOR_BACKGROUND
 from utils_base.console.constants.COLOR_FOREGROUND import COLOR_FOREGROUND
 from utils_base.console.constants.COLOR_FORMAT import COLOR_FORMAT
 
