@@ -3,7 +3,6 @@
 
 from utils_base.file.CSVFile import CSVFile
 from utils_base.file.File import File
-from utils_base.file.FiledVariable import FiledVariable
 from utils_base.file.FileOrDirectory import FileOrDirectory
 from utils_base.file.JSONFile import JSONFile
 from utils_base.file.pdf_file import (PDFFile, PDFFileCompressMixin,
