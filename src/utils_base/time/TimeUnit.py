@@ -8,9 +8,8 @@ class TimeUnit:
         if isinstance(other, float) or isinstance(other, int):
             return TimeUnit(self.seconds / other)
         raise TypeError(
-            f'unsupported operand type(s) for /: {
-                type(self)} and {
-                type(other)}'
+            "unsupported operand type(s) for /: "
+            + f"{type(self)} and {type(other)}"
         )
 
     def __mul__(self, other):
