@@ -3,7 +3,7 @@
 
 from utils_base.console import (COLOR_BACKGROUND, COLOR_FOREGROUND,
                                 COLOR_FORMAT, LEVEL_TO_STYLE, Console, Log)
-from utils_base.ds import Dict, Iter, List, Parse, String
+from utils_base.ds import Chunker, Dict, Iter, List, Parse, String
 from utils_base.file import (BigJSONFile, CSVFile, File, FileOrDirectory,
                              JSONFile, PDFFile, PDFFileCompressMixin,
                              PDFTextMixin, TSVFile, XSVFile)
