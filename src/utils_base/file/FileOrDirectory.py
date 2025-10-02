@@ -13,10 +13,6 @@ class FileOrDirectory:
     def exists(self):
         return os.path.exists(self.path)
 
-    @property
-    def is_dir(self):
-        return os.path.isdir(self.path)
-
     def __str__(self):
         return f"{self.path} ({self.size_humanized})"
 
