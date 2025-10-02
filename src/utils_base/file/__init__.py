@@ -2,7 +2,6 @@
 # flake8: noqa: F408
 
 from utils_base.file.CSVFile import CSVFile
-from utils_base.file.Directory import Directory
 from utils_base.file.DOCXFile import DOCXFile
 from utils_base.file.File import File
 from utils_base.file.FiledVariable import FiledVariable

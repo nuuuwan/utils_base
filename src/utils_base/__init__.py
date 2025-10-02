@@ -4,7 +4,7 @@
 from utils_base.console import (COLOR_BACKGROUND, COLOR_FOREGROUND,
                                 COLOR_FORMAT, LEVEL_TO_STYLE, Console, Log)
 from utils_base.ds import Dict, Iter, List, Parse, String
-from utils_base.file import (CSVFile, Directory, DOCXFile, File, FiledVariable,
+from utils_base.file import (CSVFile, DOCXFile, File, FiledVariable,
                              FileOrDirectory, JSONFile, PDFFile, TSVFile,
                              XSVFile, Zip)
 from utils_base.geo import LatLng, LatLngLK
