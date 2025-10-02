@@ -5,11 +5,11 @@ from utils_base.console.constants import (COLOR_BACKGROUND, COLOR_FOREGROUND,
 class Console:
     @staticmethod
     def format(*args, **kwargs) -> str:
-        foreground = kwargs.get('foreground', '')
-        background = kwargs.get('background', '')
-        format = kwargs.get('format', '')
-        text = ' '.join(args)
-        return ''.join(
+        foreground = kwargs.get("foreground", "")
+        background = kwargs.get("background", "")
+        format = kwargs.get("format", "")
+        text = " ".join(args)
+        return "".join(
             [foreground, background, format, text, COLOR_FORMAT.RESET]
         )
 
@@ -46,21 +46,20 @@ class Console:
         )
 
     @staticmethod
-    def md5_line(line) -> str:
+    def md5_line(line) -> str:  # noqa: CFQ004
         if not line:
-            return ''
-
-        if line.startswith('# '):
+            return ""
+        if line.startswith("# "):
             return Console.h1(line[2:])
-        if line.startswith('## '):
+        if line.startswith("## "):
             return Console.h2(line[3:])
-        if line.startswith('*') and line.endswith('*'):
+        if line.startswith("*") and line.endswith("*"):
             return Console.note(line[1:-1])
         return Console.normal(line)
 
     @staticmethod
     def md5(*args) -> str:
-        return '\n'.join(Console.md5_line(arg) for arg in args)
+        return "\n".join(Console.md5_line(arg) for arg in args)
 
     @staticmethod
     def print_lines(*args):
