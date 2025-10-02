@@ -1,6 +1,7 @@
 # utils_base.file (auto generate by build_inits.py)
 # flake8: noqa: F408
 
+from utils_base.file.BigJSONFile import BigJSONFile
 from utils_base.file.CSVFile import CSVFile
 from utils_base.file.File import File
 from utils_base.file.FileOrDirectory import FileOrDirectory

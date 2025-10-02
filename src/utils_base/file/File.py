@@ -1,4 +1,3 @@
-
 from utils_base.file.FileOrDirectory import FileOrDirectory
 
 DIALECT = "excel"
