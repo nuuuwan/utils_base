@@ -75,3 +75,13 @@ class TestCase(unittest.TestCase):
                 "sizes": [6.960000038146973, 14.039999961853027],
             },
         )
+
+    def test_compress(self):
+        pdf_file = PDFFile(os.path.join("tests", "file", "_input", "si.pdf"))
+        compressed_pdf_path = os.path.join(
+            "tests", "_output", "test_compress.pdf"
+        )
+        pdf_file.compress(compressed_pdf_path)
+        compressed_pdf_file = PDFFile(compressed_pdf_path)
+        self.assertEqual(pdf_file.size, 172_694)
+        self.assertEqual(compressed_pdf_file.size, 141_166)
