@@ -13,6 +13,7 @@ INSTALL_REQUIRES = [
     "Pillow",
     "geopy",
     "python-docx",
+    "pymupdf",
 ]
 
 setuptools.setup(
