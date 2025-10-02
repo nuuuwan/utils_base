@@ -9,10 +9,6 @@ ENCODING = "utf-8"
 
 class File(FileOrDirectory):
 
-    def delete(self):
-        if self.exists:
-            os.remove(self.path)
-
     @property
     def ext(self):
         return self.name.split(".")[-1]
